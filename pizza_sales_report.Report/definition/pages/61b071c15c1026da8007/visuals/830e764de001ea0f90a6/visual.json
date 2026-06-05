@@ -1,0 +1,221 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "830e764de001ea0f90a6",
+  "position": {
+    "x": 9.5385445203048924,
+    "y": 584.5765141729712,
+    "z": 19000,
+    "height": 222.11182240138535,
+    "width": 288.88163404351957,
+    "tabOrder": 19000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "CATEGORY",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "16pt",
+                      "textDecoration": "underline"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Classic category",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#a1343c"
+                    }
+                  },
+                  {
+                    "value": " contributes to ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "maximum ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#ad5129"
+                    }
+                  },
+                  {
+                    "value": "sales and total orders.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "MONTHLY",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "16pt",
+                      "textDecoration": "underline"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Large size",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#a1343c"
+                    }
+                  },
+                  {
+                    "value": " pizza contributes to ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "maximum ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#ad5129"
+                    }
+                  },
+                  {
+                    "value": "sales",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#000000"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

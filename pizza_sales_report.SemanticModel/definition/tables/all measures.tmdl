@@ -1,0 +1,46 @@
+table 'all measures'
+	lineageTag: 8b26cb5c-e486-4755-b1cc-0aad1d83a6e6
+
+	measure 'total revenue' = SUM(pizza_sales[total_price])
+		lineageTag: 13359f02-b0de-4c5c-88f6-50845cc59ac1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'total orders' = DISTINCTCOUNT(pizza_sales[order_id])
+		formatString: #,0
+		lineageTag: eded938e-fa49-4710-98b1-af8987c6c26c
+
+	measure 'avg order value' = [total revenue] / [total orders]
+		lineageTag: bfc4b548-2ed7-4d6a-9b1a-2c94363ead58
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'total pizzas sold' = ```
+			SUM(pizza_sales[quantity]) 
+			```
+		formatString: #,0
+		lineageTag: 434f8d98-cdaf-42c4-b652-5483f6ac4e2a
+
+	measure 'avg pizzas per order' = [total pizzas sold] / [total orders]
+		lineageTag: 269c3d14-febe-4ac1-b272-9ba822427393
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: f09f5a57-f73d-4d99-9053-7d59e589a4ff
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'all measures' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 11c0edcc56a546ea8bd115b9417c5651
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

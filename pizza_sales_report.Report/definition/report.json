@@ -1,0 +1,129 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.3.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY26SU04",
+      "reportVersionAtImport": {
+        "visual": "2.8.0",
+        "report": "3.2.0",
+        "page": "2.3.1"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY26SU04",
+          "path": "BaseThemes/CY26SU04.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "delivery-man37334273621290925.png",
+          "path": "delivery-man37334273621290925.png",
+          "type": "Image"
+        },
+        {
+          "name": "down-arrow6121267205263806.png",
+          "path": "down-arrow6121267205263806.png",
+          "type": "Image"
+        },
+        {
+          "name": "down-arrow8924741524370472.png",
+          "path": "down-arrow8924741524370472.png",
+          "type": "Image"
+        },
+        {
+          "name": "down-arrow9766546194210195.png",
+          "path": "down-arrow9766546194210195.png",
+          "type": "Image"
+        },
+        {
+          "name": "home4921629506708043.png",
+          "path": "home4921629506708043.png",
+          "type": "Image"
+        },
+        {
+          "name": "home9681010136159256.png",
+          "path": "home9681010136159256.png",
+          "type": "Image"
+        },
+        {
+          "name": "order-delivery941518258994371.png",
+          "path": "order-delivery941518258994371.png",
+          "type": "Image"
+        },
+        {
+          "name": "pizza-slice8090486140234446.png",
+          "path": "pizza-slice8090486140234446.png",
+          "type": "Image"
+        },
+        {
+          "name": "profit-growth14563150498897237.png",
+          "path": "profit-growth14563150498897237.png",
+          "type": "Image"
+        },
+        {
+          "name": "star21816847789224514.png",
+          "path": "star21816847789224514.png",
+          "type": "Image"
+        },
+        {
+          "name": "star3444124344470293.png",
+          "path": "star3444124344470293.png",
+          "type": "Image"
+        },
+        {
+          "name": "test6590411473260362.png",
+          "path": "test6590411473260362.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

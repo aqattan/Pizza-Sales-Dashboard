@@ -1,0 +1,245 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.9.0/schema.json",
+  "name": "b68c0ab29c8bc4bc4732",
+  "position": {
+    "x": 11.118598382749326,
+    "y": 299.19137466307279,
+    "z": 17000,
+    "height": 211.25336927223719,
+    "width": 288.07277628032347,
+    "tabOrder": 17000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "DAYS",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "16pt",
+                      "textDecoration": "underline"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Orders are ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "highest ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#a1343c"
+                    }
+                  },
+                  {
+                    "value": "on weekends,",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Friday/Saturday",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#118dff"
+                    }
+                  },
+                  {
+                    "value": " evenings.",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "MONTHLY",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Calibri",
+                      "fontSize": "16pt",
+                      "textDecoration": "underline"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "There are ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "maximum ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#a1343c"
+                    }
+                  },
+                  {
+                    "value": "orders",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "from month of ",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "July and January",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#118dff"
+                    }
+                  },
+                  {
+                    "value": ".",
+                    "textStyle": {
+                      "fontFamily": "Calibri",
+                      "fontSize": "14pt",
+                      "color": "#000000"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "keepLayerOrder": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

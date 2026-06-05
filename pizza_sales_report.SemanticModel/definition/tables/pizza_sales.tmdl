@@ -1,0 +1,191 @@
+table pizza_sales
+	lineageTag: b825b273-b0ee-4255-ae8d-80fd3ffdb419
+
+	column pizza_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 2619f47f-03d5-4f80-8d07-397a07b09735
+		summarizeBy: sum
+		sourceColumn: pizza_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 4bb479be-46a3-4ae5-82fc-f42a9dd2155b
+		summarizeBy: sum
+		sourceColumn: order_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pizza_name_id
+		dataType: string
+		lineageTag: 60ce3b77-90ea-4855-98d1-d207391e214a
+		summarizeBy: none
+		sourceColumn: pizza_name_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 7503bbf2-6905-47cf-a8c1-cdfa742fc766
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column order_date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ede7d306-7159-4b0b-8881-2a92d4a91e1d
+		summarizeBy: none
+		sourceColumn: order_date
+
+		variation Variation
+			isDefault
+			relationship: e407a7aa-3a66-4b5e-b305-ae4cdb8a0ca3
+			defaultHierarchy: LocalDateTable_a759f432-e25c-490a-966c-1b286d4454ea.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column order_time
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: f2e6e6ab-bb09-4449-bbc5-e8f2185471b9
+		summarizeBy: none
+		sourceColumn: order_time
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column unit_price
+		dataType: double
+		lineageTag: 57016498-7608-4174-a3ec-5bfbbec65eca
+		summarizeBy: sum
+		sourceColumn: unit_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column total_price
+		dataType: double
+		lineageTag: f425d151-7b2a-4a1b-a28e-175527abca00
+		summarizeBy: sum
+		sourceColumn: total_price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pizza_size
+		dataType: string
+		lineageTag: c88292b1-3ec1-4377-9740-7315f5e1e6a7
+		summarizeBy: none
+		sourceColumn: pizza_size
+
+		annotation SummarizationSetBy = Automatic
+
+	column pizza_category
+		dataType: string
+		lineageTag: 2714397c-4a89-4633-9b84-30016d9639bd
+		summarizeBy: none
+		sourceColumn: pizza_category
+
+		annotation SummarizationSetBy = Automatic
+
+	column pizza_ingredients
+		dataType: string
+		lineageTag: 242e3809-9a1f-4a99-aece-9afd63731f05
+		summarizeBy: none
+		sourceColumn: pizza_ingredients
+
+		annotation SummarizationSetBy = Automatic
+
+	column pizza_name
+		dataType: string
+		lineageTag: 0d089daa-b1af-4674-9c2d-abd62bf3d379
+		summarizeBy: none
+		sourceColumn: pizza_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Name'
+		dataType: string
+		lineageTag: c2185617-e13d-435a-931f-20bf91010187
+		summarizeBy: none
+		sourceColumn: Day Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'order day' = UPPER(LEFT(pizza_sales[Day Name], 3))
+		lineageTag: d00e6e85-f1ed-40b2-8f05-e939c6ee7e81
+		summarizeBy: none
+		sortByColumn: 'day number'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'day number'
+		dataType: string
+		lineageTag: c32b20d5-2e00-4859-a07c-d9625394bfdd
+		summarizeBy: none
+		sourceColumn: day number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		dataType: string
+		lineageTag: c25b65e5-0fe0-4acf-9797-122bccfb8099
+		summarizeBy: none
+		sourceColumn: Month Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'month number'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f959d8d-c138-40b1-b193-0e0bb53fdbb7
+		summarizeBy: sum
+		sourceColumn: month number
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'order month' = UPPER(LEFT(pizza_sales[Month Name], 3))
+		lineageTag: 04dfb077-978e-46bb-9e33-40635709f16f
+		summarizeBy: none
+		sortByColumn: 'month number'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition pizza_sales = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("AK\SQLEXPRESS", "Pizza DB"),
+				    dbo_pizza_sales = Source{[Schema="dbo",Item="pizza_sales"]}[Data],
+				    #"Replaced Value" = Table.ReplaceValue(dbo_pizza_sales,"M","Medium",Replacer.ReplaceText,{"pizza_size"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","L","Large",Replacer.ReplaceText,{"pizza_size"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","S","Small",Replacer.ReplaceText,{"pizza_size"}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","XLarge","X-Large",Replacer.ReplaceText,{"pizza_size"}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","Small","Regular",Replacer.ReplaceText,{"pizza_size"}),
+				    #"Inserted Day Name" = Table.AddColumn(#"Replaced Value4", "Day Name", each Date.DayOfWeekName([order_date]), type text),
+				    #"Added Conditional Column" = Table.AddColumn(#"Inserted Day Name", "day number", each if [Day Name] = "Sunday" then 1 else if [Day Name] = "Monday" then 2 else if [Day Name] = "Tuesday" then 3 else if [Day Name] = "Wednesday" then 4 else if [Day Name] = "Thursday" then 5 else if [Day Name] = "Friday" then 6 else if [Day Name] = "Saturday" then 7 else null),
+				    #"Inserted Month Name" = Table.AddColumn(#"Added Conditional Column", "Month Name", each Date.MonthName([order_date]), type text),
+				    #"Inserted Month" = Table.AddColumn(#"Inserted Month Name", "Month", each Date.Month([order_date]), Int64.Type),
+				    #"Renamed Columns" = Table.RenameColumns(#"Inserted Month",{{"Month", "month number"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
